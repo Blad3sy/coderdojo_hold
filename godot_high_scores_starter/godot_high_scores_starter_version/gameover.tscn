@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://gameover.gd" type="Script" id=2]
+
+[node name="gameover" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.05951
+margin_bottom = -1.05951
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 284.996
+margin_top = 72.0435
+margin_right = 676.996
+margin_bottom = 258.043
+custom_fonts/font = ExtResource( 1 )
+text = "GAME OVER
+
+YOUR SCORE IS: 
+
+ENTER YOUR NAME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="score" type="Label" parent="."]
+margin_left = 682.294
+margin_top = 200.239
+margin_right = 722.294
+margin_bottom = 260.239
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 289.157
+margin_top = 420.762
+margin_right = 700.157
+margin_bottom = 496.762
+custom_fonts/font = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
